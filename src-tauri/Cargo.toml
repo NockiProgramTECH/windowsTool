@@ -1,0 +1,25 @@
+[package]
+name = "windows-maintenance-tool"
+version = "0.1.0"
+description = "Windows Maintenance Tool — Phase 1"
+edition = "2021"
+rust-version = "1.95"
+
+[lib]
+name = "windows_maintenance_tool"
+path = "lib.rs"
+
+[[bin]]
+name = "windows-maintenance-tool"
+path = "main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+sysinfo = "0.39.6"
+
+[dev-dependencies]
+serde_json = "1"
